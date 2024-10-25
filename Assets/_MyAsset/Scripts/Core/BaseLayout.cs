@@ -5,14 +5,18 @@ public abstract class BaseLayout : MonoBehaviour
     [SerializeField] private GameObject _layout;
     public GameObject Layout => _layout;
 
-    public void Open()
+    public virtual void OpenLayout()
     {
         _layout.SetActive(true);
     }
 
-    public void Close()
+    public virtual void CloseLayout()
     {
         _layout.SetActive(false);
     }
 
+    public void SetActiveLayout(bool active)
+    {
+        _layout.SetActive(active);
+    }
 }

@@ -1,3 +1,7 @@
+[db.sql](./Assets/_MyAsset/Diagram/db.sql) <br>
+[db.drawio](./Assets/_MyAsset/Diagram/info.drawio) <br>
+![db image](./Assets/_MyAsset/Diagram/db%20image.png) <br>
+
 # Todo List
 
 - [x] Tạo repo github

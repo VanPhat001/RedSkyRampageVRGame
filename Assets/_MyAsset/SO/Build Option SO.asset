@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 340ab4e0b12f142b49e3ec43ae428cac, type: 3}
   m_Name: Build Option SO
   m_EditorClassIdentifier: 
-  _description: "Ch\u1EC9 build Client."
-  _option: 1
+  _description: "Build Client tr\xEAn:\n  - Oculus.\n  - Thi\u1EBFt b\u1ECB Desktop.\n\nBuild
+    Server tr\xEAn Editor."
+  _option: 0

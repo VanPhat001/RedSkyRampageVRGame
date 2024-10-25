@@ -79,8 +79,8 @@ public class NetworkSceneManager : MonoBehaviour
         if (NetworkManager.Singleton.StartServer())
         {
             Debug.Log("[DEV] start server!!!");
-            Loader.LoadSceneAdditive(Loader.ESceneNames.ServerScene);
-            NetworkSceneUIManager.Singleton.Close();
+            Loader.LoadSceneAdditive(ESceneNames.ServerScene);
+            NetworkSceneUIManager.Singleton.CloseLayout();
         }
         else
         {
@@ -102,8 +102,8 @@ public class NetworkSceneManager : MonoBehaviour
         if (NetworkManager.Singleton.StartClient())
         {
             Debug.Log("[DEV] start client!!!");
-            Loader.LoadSceneAdditive(Loader.ESceneNames.ClientScene);
-            NetworkSceneUIManager.Singleton.Close();
+            Loader.LoadSceneAdditive(ESceneNames.ClientScene);
+            NetworkSceneUIManager.Singleton.CloseLayout();
         }
         else
         {
