@@ -15,7 +15,12 @@ public class MainMenuLayout : BaseLayout
         });
         
         _singleplayerButton.onClick.AddListener(() => {
+            _singleplayerButton.interactable = false;
+
             Debug.Log("_singleplayerButton clicked");
+            Loader.LoadSceneAdditive(ESceneNames.MapLevelScene);
+
+            _singleplayerButton.interactable = true;
         });
         
         _changeSkinButton.onClick.AddListener(() => {

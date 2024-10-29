@@ -1,0 +1,10 @@
+# ninja log v5
+2	846	1730218499711475793	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	45971556433be208
+3	869	1730218499734147661	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	b7a7f9c5635c972e
+3	880	1730218499745226033	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	7298863d7dfb19c3
+1	912	1730218499777890110	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	98b643e4de295472
+4	964	1730218499829066155	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	451b68d98008dd42
+1	1017	1730218499883462895	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	b2493f2b8b208750
+2	1132	1730218499996830773	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	367900065a1751f7
+1	1223	1730218500088047907	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	87528eb1cabebf4b
+1223	1310	1730218500172982775	/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/71422f1k/obj/arm64-v8a/libgame.so	fccab82166f86776

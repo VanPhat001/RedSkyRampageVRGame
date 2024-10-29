@@ -24,6 +24,7 @@ public class LoginLayout : BaseLayout
 
         if (authPlayerParams.IsFound)
         {
+            Storage.DBPlayerId = authPlayerParams.DBPlayerId;
             ClientSceneUIManager.Singleton.LockLayout.CloseLayout();
             ClientSceneUIManager.Singleton.LogoLayout.OpenLayout();
         }

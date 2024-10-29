@@ -1,0 +1,5 @@
+/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/.utmp/RelWithDebInfo/71422f1k/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/.utmp/RelWithDebInfo/71422f1k/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/.utmp/RelWithDebInfo/71422f1k/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/.utmp/RelWithDebInfo/71422f1k/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/vanphat/Documents/Workspace/LuanVan/RedSkyRampageVRGame/.utmp/RelWithDebInfo/71422f1k/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir

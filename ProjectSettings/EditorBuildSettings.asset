@@ -15,6 +15,15 @@ EditorBuildSettings:
     path: Assets/_MyAsset/Scenes/ClientScene.unity
     guid: 4a4f4f02478ab46c19a6483691d0f834
   - enabled: 1
+    path: Assets/_MyAsset/Scenes/ChangeSkinScene.unity
+    guid: 7d04915a34e4d4f6386ac9aea5955bc5
+  - enabled: 1
+    path: Assets/_MyAsset/Scenes/ZombieDetailScene.unity
+    guid: 94005d7b039dd4ee99332f2588f1b481
+  - enabled: 1
+    path: Assets/_MyAsset/Scenes/MapLevelScene.unity
+    guid: 1bdabe829d0b4414fbecd01b939fe69c
+  - enabled: 1
     path: Assets/_MyAsset/Scenes/Level/Level1Scene.unity
     guid: b0031b1a3b1894312b659398fc4192cb
   - enabled: 1

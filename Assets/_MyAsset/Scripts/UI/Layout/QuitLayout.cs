@@ -9,7 +9,12 @@ public class QuitLayout : BaseLayout
     void Start()
     {
         _zombieDetailButton.onClick.AddListener(() => {
+            _zombieDetailButton.interactable = false;
+
             Debug.Log("_zombieDetailButton clicked");
+            Loader.LoadSceneAdditive(ESceneNames.ZombieDetailScene);
+            
+            _zombieDetailButton.interactable = true;
         });
 
         _quitButton.onClick.AddListener(() =>
