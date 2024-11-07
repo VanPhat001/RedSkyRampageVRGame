@@ -33,7 +33,7 @@
 - [ ] Map Level Scene
   - [x] Điều hướng từ ClientScene (Load Additive)
   - [x] Điều hướng về ClientScene (Unload)
-  - [ ] Tích hợp map
+  - [x] Tích hợp map
   - [ ] Fetch thông tin map
 - [ ] Zombie Detail Scene
   - [x] Điều hướng từ ClientScene (Load Addtive)
@@ -94,16 +94,15 @@ Bối cảnh:
   - Cutscene -> Máy bay tiếp viện đến thả bom
   - Kết thúc
 
-- [ ] Map Level 2
-  - [ ] Main Mission
-    - [ ] Sống sót
-    - [ ] Phòng thủ cứ điểm
-  - [ ] Sub Mission 1
-    - [ ] HP >= 50%
-  - [ ] Sub Mission 2
-    - [ ] Tiêu diệt ít nhất 4 zombie
-  - [ ] Sub Mission 3
-    - [ ] Hidden Item: `flare gun`
+- [ ] Main Mission
+  - [ ] Sống sót
+  - [ ] Phòng thủ cứ điểm
+- [ ] Sub Mission 1
+  - [ ] HP >= 50%
+- [ ] Sub Mission 2
+  - [ ] Tiêu diệt ít nhất 4 zombie
+- [ ] Sub Mission 3
+  - [ ] Hidden Item: `flare gun`
 
 <br>
 <br>

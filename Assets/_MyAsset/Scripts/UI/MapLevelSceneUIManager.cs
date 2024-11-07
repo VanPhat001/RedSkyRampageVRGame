@@ -5,12 +5,11 @@ using UnityEngine.UI;
 public class MapLevelSceneUIManager : BaseLayout
 {
     public static MapLevelSceneUIManager Singleton { get; private set; }
+
+    #region Test
+#if true
     [SerializeField] private Button _backToHomeButton;
 
-    void Awake()
-    {
-        Singleton = this;
-    }
 
     void Start()
     {
@@ -24,5 +23,19 @@ public class MapLevelSceneUIManager : BaseLayout
                 player.transform.rotation = Quaternion.identity;
             });
         });
+    }
+#endif
+    #endregion
+
+
+    [SerializeField] private MapLevelLayout _mapLevelLayout;
+    public MapLevelLayout MapLevelLayout => _mapLevelLayout;
+    
+    [SerializeField] private LevelInfoLayout _levelInfoLayout;
+    public LevelInfoLayout LevelInfoLayout => _levelInfoLayout;
+
+    void Awake()
+    {
+        Singleton = this;
     }
 }

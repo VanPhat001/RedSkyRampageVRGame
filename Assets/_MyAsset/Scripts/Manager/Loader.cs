@@ -25,6 +25,11 @@ public class Loader
     }
 
 
+    static public void LoadSceneAdditive(string scene)
+    {
+        SceneManager.LoadScene(scene, LoadSceneMode.Additive);
+    }
+
     static public void LoadSceneAdditive(ESceneNames scene)
     {
         SceneManager.LoadScene(scene.ToString(), LoadSceneMode.Additive);
