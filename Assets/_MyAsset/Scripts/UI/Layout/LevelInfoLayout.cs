@@ -70,16 +70,18 @@ public class LevelInfoLayout : BaseLayout
     {
         base.OpenLayout();
 
-        Layout.transform.DOScale(Vector3.one, .4f);
+        Layout.transform
+            .DOScale(Vector3.one, .4f);
 
         _mapLevelId = mapLevelId;
-        _titleText.text = $"{mapLevelId}\n{levelName}";
+        _titleText.text = $"Level {mapLevelId}\n{levelName}";
         FillStars(point);
     }
 
     public override void CloseLayout()
     {
-        Layout.transform.DOScale(Vector3.zero, .4f)
-        .OnComplete(() => base.CloseLayout());
+        Layout.transform
+            .DOScale(Vector3.zero, .4f)
+            .OnComplete(() => base.CloseLayout());
     }
 }
