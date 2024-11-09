@@ -20,6 +20,12 @@ public class Pistol : BaseGun
 
     [SerializeField] private GameObject _bulletPrefab;
 
+    [Header("Sound")]
+    [SerializeField] private AudioClip _fireSound;
+    [SerializeField] private AudioClip _reloadSound;
+    [SerializeField] private AudioClip _reloadFailSound;
+    [SerializeField] private AudioSource _audioSource;
+
     private float _fireTimer = 0;
     private bool _isReloading = false;
 
@@ -39,11 +45,13 @@ public class Pistol : BaseGun
     {
         if (!CanShoot())
         {
+            // _audioSource.PlayOneShot(_reloadFailSound);
             return false;
         }
 
         _ammoAvaiable--;
         _fireTimer = _fireRate;
+        // _audioSource.PlayOneShot(_fireSound);
         // spawn bullet
 
         return true;

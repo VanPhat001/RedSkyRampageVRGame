@@ -3,9 +3,12 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Networking;
 
+[RequireComponent(typeof(AudioSource))]
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Singleton { get; private set; }
+
+    [SerializeField] private AudioSource _audioSource;
 
     void Awake()
     {
@@ -19,7 +22,10 @@ public class AudioManager : MonoBehaviour
         // GetAudioFromURL(text, audioClip => audioSource.PlayOneShot(audioClip));
     }
 
-
+    public void PlayAudioFromUrl(string voiceText)
+    {
+        GetAudioFromURL(voiceText, audioClip => _audioSource.PlayOneShot(audioClip));
+    }
 
     public void GetAudioFromURL(string voiceText, Action<AudioClip> onComplete)
     {

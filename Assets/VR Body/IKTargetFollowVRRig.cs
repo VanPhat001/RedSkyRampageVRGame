@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 [System.Serializable]
 public class VRMap
@@ -16,7 +17,7 @@ public class VRMap
 
 public class IKTargetFollowVRRig : MonoBehaviour
 {
-    [Range(0,1)]
+    [Range(0, 1)]
     public float turnSmoothness = 0.1f;
     public VRMap head;
     public VRMap leftHand;
@@ -28,12 +29,19 @@ public class IKTargetFollowVRRig : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = head.ikTarget.position + headBodyPositionOffset;
-        float yaw = head.vrTarget.eulerAngles.y;
-        transform.rotation = Quaternion.Lerp(transform.rotation,Quaternion.Euler(transform.eulerAngles.x, yaw, transform.eulerAngles.z),turnSmoothness);
+        try
+        {
+            transform.position = head.ikTarget.position + headBodyPositionOffset;
+            float yaw = head.vrTarget.eulerAngles.y;
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(transform.eulerAngles.x, yaw, transform.eulerAngles.z), turnSmoothness);
 
-        head.Map();
-        leftHand.Map();
-        rightHand.Map();
+            head.Map();
+            leftHand.Map();
+            rightHand.Map();
+        }
+        catch (Exception e)
+        {
+            Debug.Log("[DEV, ERROR] " + e);
+        }
     }
 }
