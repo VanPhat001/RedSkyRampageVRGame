@@ -20,7 +20,7 @@
   - [x] `BaseLayout.cs`
   - [x] `BaseGun.cs`
 - [ ] Interface
-  - [ ] `IDamageable.cs`
+  - [x] `IDamageable.cs`
   - [ ] `IHealable.cs`
 - [ ] DTO
 - [ ] `VR Character`
@@ -50,9 +50,15 @@
   - [ ] Gửi lời mời kết bạn
   - [ ] Mời tham gia phòng chờ
 - [ ] Emeny
+  - [x] `War Zombie`
+  - [ ] `Zombie Girl`
 - [ ] Bullet
+  - [x] Local Bullet
+  - [ ] Network Bullet
 - [ ] Occlusion Culling
-- [ ] Network Visibility
+  - [x] Level 1
+  - [ ] Level 2
+- [x] Network Visibility
 - [x] Teleport Player thông qua `XR Origin`
 
 <br>
@@ -69,14 +75,15 @@ Bối cảnh:
   - Virus khiến những xác chết biến thành zombie
 
 - [ ] Mission 1
-  - [ ] Di chuyển đến vị trí vũ khí
-  - [ ] Nhặt vũ khí
+  - [x] Di chuyển đến vị trí vũ khí
+  - [x] Nhặt vũ khí
   - [ ] Hướng dẫn bóp cò
   - [ ] Hướng dẫn nạp đạn
 - [ ] Mission 2
-  - [ ] Tiêu diệt 5 zombie -> Rớt thư
+  - [ ] Tiêu diệt 3 zombie -> Rớt thư
 - [ ] Mission 3
   - [ ] Nhặt mission item (thư)
+  - [ ] Đi đến vị trí chỉ định
   - [ ] Kết thúc
 
 <br>
