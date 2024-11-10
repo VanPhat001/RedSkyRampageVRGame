@@ -481,6 +481,7 @@ MonoBehaviour:
   _rightHandColliders:
     _colliders:
     - {fileID: 2977122657158910504}
+  _rightHandDamage: 5
 --- !u!1 &1670042624996935749
 GameObject:
   m_ObjectHideFlags: 0
@@ -868,6 +869,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2767040629334906281}
+  - component: {fileID: 713863469643178341}
   m_Layer: 8
   m_Name: mixamorig:Hips
   m_TagString: Untagged
@@ -893,6 +895,29 @@ Transform:
   - {fileID: 3403576916600538017}
   m_Father: {fileID: 344693731053718906}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &713863469643178341
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532812307894606770}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2954219
+  m_Height: 1.9295967
+  m_Direction: 1
+  m_Center: {x: -0.002794862, y: 0.020194532, z: 0.053892374}
 --- !u!1 &3654164713354924011
 GameObject:
   m_ObjectHideFlags: 0

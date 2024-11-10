@@ -54,6 +54,10 @@ public class Pistol : BaseGun
         // _audioSource.PlayOneShot(_fireSound);
         // spawn bullet
 
+        Instantiate(_bulletPrefab)
+            .GetComponent<Bullet>()
+            .Init(FirePoint.position, FirePoint.rotation);
+
         return true;
     }
 
