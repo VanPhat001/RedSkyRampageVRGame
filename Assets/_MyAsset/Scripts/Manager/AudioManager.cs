@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -22,9 +23,22 @@ public class AudioManager : MonoBehaviour
         // GetAudioFromURL(text, audioClip => audioSource.PlayOneShot(audioClip));
     }
 
-    public void PlayAudioFromUrl(string voiceText)
+    public void PlayAudioFromUrl(string voiceText, Action onPlayEnd)
     {
-        GetAudioFromURL(voiceText, audioClip => _audioSource.PlayOneShot(audioClip));
+        GetAudioFromURL(voiceText, audioClip =>
+        {
+            // _audioSource.PlayOneShot(audioClip);
+            StartCoroutine(PlayAudioCoroutine(audioClip, onPlayEnd));
+        });
+
+        IEnumerator PlayAudioCoroutine(AudioClip audioClip, Action onPlayEnd)
+        {
+            _audioSource.clip = audioClip;
+            _audioSource.Play();
+            yield return new WaitForEndOfFrame();
+            yield return new WaitUntil(() => _audioSource.time >= _audioSource.clip.length);
+            onPlayEnd?.Invoke();
+        }
     }
 
     public void GetAudioFromURL(string voiceText, Action<AudioClip> onComplete)

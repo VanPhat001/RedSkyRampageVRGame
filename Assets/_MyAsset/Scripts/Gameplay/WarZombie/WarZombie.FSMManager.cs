@@ -12,18 +12,26 @@ namespace WarZombie
     {
         // public Transform Model;
         [SerializeField] private Animator Anim;
-        
-        public NavMeshAgent Agent;
-        
-        public Transform Target;
-        
+
+        [SerializeField] public NavMeshAgent _agent;
+        public NavMeshAgent Agent => _agent;
+
+        [SerializeField] private Transform _target;
+        public Transform Target => _target;
+
         [HideInInspector] public AnimationManager AnimManager;
-        
+
+        [SerializeField] private HealthBarSlider _healthBarSlider;
+        // public HealthBarSlider HealthBarSlider => _healthBarSlider;
+
         [Range(0, 100)]
         public float HP = 100;
 
         // [Range(0, 1)]
         // public float DamageDecreaseRate = 0;
+
+        [SerializeField] private Collider _bodyCollider;
+        public Collider BodyCollider => _bodyCollider;
 
         [SerializeField] private ColliderList _rightHandColliders;
         public ColliderList RightHandColliders => _rightHandColliders;
@@ -31,8 +39,10 @@ namespace WarZombie
         [SerializeField] private float _rightHandDamage = 5f;
         public float RightHandDamage => _rightHandDamage;
 
+
         void Awake()
         {
+            BodyCollider.enabled = true;
             RightHandColliders.DisableAll();
 
             AnimManager = new AnimationManager(Anim);
@@ -67,6 +77,7 @@ namespace WarZombie
             }
 
             HP = Mathf.Clamp(HP - damage, 0, 100);
+            _healthBarSlider.SetValue(HP / 100f);
 
             if (HP <= 0)
             {

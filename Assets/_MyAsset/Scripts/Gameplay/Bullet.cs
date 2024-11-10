@@ -16,6 +16,7 @@ public class Bullet : MonoBehaviour
         this.transform.rotation = rot;
         _rigidbody.linearVelocity = this.transform.forward.normalized * _speed;
 
+        Destroy(this.gameObject, 8);
     }
 
     // void Start()
@@ -50,7 +51,7 @@ public class Bullet : MonoBehaviour
 
     void OnCottactWithObject(RaycastHit hit)
     {
-        Debug.Log("[DEV] contact" + hit.transform.gameObject.name);
+        // Debug.Log("[DEV] contact" + hit.transform.gameObject.name);
         hit.transform.GetComponent<IDamageable>()?.GetHit(_damage);
         Destroy(this.gameObject);
     }

@@ -15,14 +15,6 @@ public class PlayerManager : MonoBehaviour, IDamageable
     public PlayerHealth PlayerHealth => _playerHealth;
 
 
-    [ContextMenu("Auto Fill")]
-    void AutoFill()
-    {
-        _playerShoot = this.GetComponentInChildren<PlayerShoot>();
-        _playerWeapon = this.GetComponentInChildren<PlayerWeapon>();
-        _playerHealth = this.GetComponentInChildren<PlayerHealth>();
-    }
-
     void Awake()
     {
         Singleton = this;

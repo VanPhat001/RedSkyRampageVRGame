@@ -308,6 +308,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidbody: {fileID: 4476811244482818325}
-  _sphereCollider: {fileID: 2506545339590653208}
   _damage: 20
-  _speed: 20
+  _speed: 30

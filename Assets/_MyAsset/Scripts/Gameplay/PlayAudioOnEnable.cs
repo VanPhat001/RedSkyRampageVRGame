@@ -1,3 +1,5 @@
+using System.Collections;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class PlayAudioOnEnable : MonoBehaviour
@@ -7,6 +9,8 @@ public class PlayAudioOnEnable : MonoBehaviour
 
     void OnEnable()
     {
-        AudioManager.Singleton.PlayAudioFromUrl(_voiceText);
+        AudioManager.Singleton.PlayAudioFromUrl(_voiceText, () => {
+            this.gameObject.SetActive(false);
+        });
     }
 }
