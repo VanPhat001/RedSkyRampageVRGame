@@ -13,6 +13,7 @@ namespace WarZombie
 
         public override void EnterState()
         {
+            _manager.AnimManager.SetDeath(true);
         }
 
         public override void UpdateState()
