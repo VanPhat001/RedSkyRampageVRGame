@@ -17,7 +17,7 @@ namespace WarZombie
         public NavMeshAgent Agent => _agent;
 
         [SerializeField] private Transform _target;
-        public Transform Target => _target;
+        public Transform Target { get => _target; set => _target = value; }
 
         [HideInInspector] public AnimationManager AnimManager;
 

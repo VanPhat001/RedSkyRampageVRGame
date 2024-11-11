@@ -33,6 +33,7 @@ public class AudioManager : MonoBehaviour
 
         IEnumerator PlayAudioCoroutine(AudioClip audioClip, Action onPlayEnd)
         {
+            _audioSource.Stop();
             _audioSource.clip = audioClip;
             _audioSource.Play();
             yield return new WaitForEndOfFrame();

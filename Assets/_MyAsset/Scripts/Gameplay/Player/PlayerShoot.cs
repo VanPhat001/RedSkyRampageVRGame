@@ -4,19 +4,27 @@ using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
-    [SerializeField] private InputActionProperty _rightActivate;
-    [SerializeField] private InputActionProperty _rightSelect;
+    // [SerializeField] private InputActionProperty _rightActivate;
+    // [SerializeField] private InputActionProperty _rightSelect;
+    private PlayerWeapon _playerWeapon;
+
+    void Start()
+    {
+        _playerWeapon = PlayerManager.Singleton.PlayerWeapon;
+    }
 
     void Update()
     {
-        var isHoldRightTrigger = _rightActivate.action.ReadValue<float>() > 0;
-        var isHoldRightSelect = _rightSelect.action.ReadValue<float>() > 0;
+        // var isHoldRightTrigger = _rightActivate.action.ReadValue<float>() > 0;
+        // var isHoldRightSelect = _rightSelect.action.ReadValue<float>() > 0;
+        var isRightHandTriggerHold = InputManager.Singleton.IsRightHand_TriggerHold;
+        var isRightHandGripHold = InputManager.Singleton.IsRightHand_GripHold;
 
-        if (isHoldRightTrigger)
+        if (isRightHandTriggerHold)
         {
             Fire();
         }
-        if (isHoldRightSelect)
+        if (isRightHandGripHold)
         {
             Reload();
         }
@@ -24,14 +32,14 @@ public class PlayerShoot : MonoBehaviour
 
     public void Fire()
     {
-        if (PlayerManager.Singleton.PlayerWeapon.Gun.gameObject.activeSelf && PlayerManager.Singleton.PlayerWeapon.Gun.Fire())
+        if (_playerWeapon.HaveWeapon() && _playerWeapon.Gun.Fire())
         {
         }
     }
 
     public void Reload()
     {
-        if (PlayerManager.Singleton.PlayerWeapon.Gun.gameObject.activeSelf && PlayerManager.Singleton.PlayerWeapon.Gun.Reload())
+        if (_playerWeapon.HaveWeapon() && _playerWeapon.Gun.Reload())
         {
         }
     }

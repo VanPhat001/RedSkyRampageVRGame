@@ -15,7 +15,7 @@
 - [x] Serialize Dictionary
 - [x] Room Manager
 - [x] Object Pool
-- [ ] Finite State Machine
+- [x] Finite State Machine
 - [ ] Abstract Class
   - [x] `BaseLayout.cs`
   - [x] `BaseGun.cs`
@@ -28,7 +28,7 @@
   - [ ] Thiết kế
 - [ ] Singleplayer Scene
   - [x] Điều hướng đến Map Level Scene (Load Additive)
-  - [ ] `level1scene`
+  - [x] `level1scene`
   - [ ] `level2scene`
 - [ ] Map Level Scene
   - [x] Điều hướng từ ClientScene (Load Additive)
@@ -40,12 +40,12 @@
   - [x] Điều hướng về ClientScene (Unload)
   - [ ] Hiển thị thông tin zombie
   - [ ] Hiển thị model zombie
-- [ ] Change Skin Scene
-  - [ ] Điều hướng từ ClientScene (Load Addtive)
-  - [ ] Điều hướng về ClientScene (Unload)
-  - [ ] Fetch thông tin trang phục
-  - [ ] Tạo Game Object gương
-  - [ ] API thay đổi trang phục ==> Trang phục này dùng ở đâu?
+- ~~[ ] Change Skin Scene~~
+  - ~~[ ] Điều hướng từ ClientScene (Load Addtive)~~
+  - ~~[ ] Điều hướng về ClientScene (Unload)~~
+  - ~~[ ] Fetch thông tin trang phục~~
+  - ~~[ ] Tạo Game Object gương~~
+  - ~~[ ] API thay đổi trang phục ==> Trang phục này dùng ở đâu?~~
 - [ ] Hệ thống bạn bè
   - [ ] Gửi lời mời kết bạn
   - [ ] Mời tham gia phòng chờ
@@ -77,8 +77,8 @@ Bối cảnh:
 - [ ] Mission 1
   - [x] Di chuyển đến vị trí vũ khí
   - [x] Nhặt vũ khí
-  - [ ] Hướng dẫn bóp cò
-  - [ ] Hướng dẫn nạp đạn
+  - [x] Hướng dẫn bóp cò
+  - [x] Hướng dẫn nạp đạn
 - [ ] Mission 2
   - [ ] Tiêu diệt 3 zombie -> Rớt thư
 - [ ] Mission 3
@@ -115,3 +115,6 @@ Bối cảnh:
 <br>
 
 # Error List
+- Check lại âm thanh ở level1scene, phát xong nhưng k enalbed=false gameobject
+  - Lỗi mạng
+  - Lỗi code

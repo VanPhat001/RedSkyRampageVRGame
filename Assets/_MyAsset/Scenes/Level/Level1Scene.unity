@@ -2909,6 +2909,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _voiceText: Defeat 3 zombies
+  _disableWhenFinish: 1
 --- !u!1001 &202530838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3951,7 +3952,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97772dc4778a4417f8145e78fe260dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _voiceText: Step 4... fisnish
+  _voiceText: Step 4... finish
+  _disableWhenFinish: 1
 --- !u!1001 &280087623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7765,6 +7767,7 @@ MonoBehaviour:
   _detectLayer:
     serializedVersion: 2
     m_Bits: 128
+  _weaponSO: {fileID: 11400000, guid: b5f689422d4494e199a2a8b0dc94a6b8, type: 2}
 --- !u!114 &584806806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8033,6 +8036,37 @@ Transform:
   - {fileID: 1781548484}
   m_Father: {fileID: 285460286}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &621226577
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 621226578}
+  m_Layer: 0
+  m_Name: Spawn Point (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &621226578
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621226577}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.37, y: 0, z: -1.97}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874306668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &621616531
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8115,6 +8149,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010230679374, guid: fee6e1da33beae9409089ab8a832464f, type: 3}
   m_PrefabInstance: {fileID: 621616531}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &622975811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 622975812}
+  m_Layer: 0
+  m_Name: Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &622975812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 622975811}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874306668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &628265630
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10551,6 +10616,98 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000013149834228, guid: 6857ff1d3761e21479727f3b27cc8f68, type: 3}
   m_PrefabInstance: {fileID: 817047462}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &822046097
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 822046099}
+  - component: {fileID: 822046098}
+  m_Layer: 0
+  m_Name: Input Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &822046098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822046097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9dbbc40db63749bb974d91210a071e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _leftHandActivate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Activate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 3392d697-a872-4c17-bc7e-aa576d3fc84a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -5982496924579745919, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _leftHandSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Left Hand Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d6c4f26c-5b6c-4b99-8090-a0f0554a8290
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -6131295136447488360, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _rightHandActivate:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Activate
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 56715914-395e-4820-8fc6-ffa93d7f801c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  _rightHandSelect:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Right Hand Select
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 545ad354-de0a-427a-a2b8-7ede1d3a337a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!4 &822046099
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 822046097}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &838908049
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10684,6 +10841,10 @@ PrefabInstance:
     - target: {fileID: 5376736417341700348, guid: 876c24e4f13ba4273ab65adf2e84fdd8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714081555909367482, guid: 876c24e4f13ba4273ab65adf2e84fdd8, type: 3}
+      propertyPath: m_Name
+      value: Weapon Container
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14279,6 +14440,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010313559602, guid: 7b4f0314f4e30c94185e84a096c302bc, type: 3}
   m_PrefabInstance: {fileID: 1086390157}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1093716954 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3039809228253441224, guid: 876c24e4f13ba4273ab65adf2e84fdd8, type: 3}
+  m_PrefabInstance: {fileID: 846862748}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1095591442
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15705,7 +15871,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97772dc4778a4417f8145e78fe260dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _voiceText: Step 2... fisnish
+  _voiceText: Step 2... finish
+  _disableWhenFinish: 1
 --- !u!1001 &1223853210
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16828,7 +16995,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _goList:
   - {fileID: 201363216}
-  - {fileID: 1874306667}
   - {fileID: 919132148556537602}
 --- !u!114 &1268470009
 MonoBehaviour:
@@ -16845,6 +17011,7 @@ MonoBehaviour:
   _voiceText: 'Press trigger button to shoot...
 
     Press grip button to reload...'
+  _disableWhenFinish: 1
 --- !u!1 &1274723996
 GameObject:
   m_ObjectHideFlags: 0
@@ -16875,6 +17042,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _voiceText: Move to waypoint and pick up the pistol
+  _disableWhenFinish: 1
 --- !u!4 &1274723998
 Transform:
   m_ObjectHideFlags: 0
@@ -23353,6 +23521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1401f608fd2c4457d97183c82c046a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _gunContainer: {fileID: 1093716954}
   _gun: {fileID: 2004778582}
 --- !u!4 &1683775772
 Transform:
@@ -23428,7 +23597,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97772dc4778a4417f8145e78fe260dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _voiceText: Step 3... fisnish
+  _voiceText: Step 3... finish
+  _disableWhenFinish: 1
 --- !u!1001 &1690544613
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24078,6 +24248,10 @@ PrefabInstance:
     - target: {fileID: 7880054650366986418, guid: 3a85fac9eb55d4ea1a7439fc4a31b434, type: 3}
       propertyPath: m_Name
       value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 7880054650366986418, guid: 3a85fac9eb55d4ea1a7439fc4a31b434, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -26090,7 +26264,6 @@ Transform:
   - {fileID: 1268470007}
   - {fileID: 153522628}
   - {fileID: 201363217}
-  - {fileID: 1874306668}
   - {fileID: 543450653098952120}
   - {fileID: 943245204}
   m_Father: {fileID: 0}
@@ -26170,13 +26343,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1874306668}
+  - component: {fileID: 1874306669}
   m_Layer: 0
-  m_Name: Spawn Zombies
+  m_Name: Level1 Scene Spawn Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1874306668
 Transform:
   m_ObjectHideFlags: 0
@@ -26185,13 +26359,33 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874306667}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1867727223}
+  m_Children:
+  - {fileID: 622975812}
+  - {fileID: 621226578}
+  - {fileID: 2049026963}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1874306669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874306667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb30718e907cf4289ab8f587eadad3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _warZombiePrefab: {fileID: 1611155561646778984, guid: c6c1472691454468791af67b23a88d7b, type: 3}
+  _spawnPoints:
+  - {fileID: 622975812}
+  - {fileID: 621226578}
+  - {fileID: 2049026963}
 --- !u!4 &1879234992 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5129105121450642018, guid: 2181c028740fe4e80bfc5a60d9321bb3, type: 3}
@@ -26984,13 +27178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97772dc4778a4417f8145e78fe260dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _voiceText: "Step 1... fisnish\n\nThis is bad... The bioweapons research lab was
+  _voiceText: "Step 1... finish\n\nThis is bad... The bioweapons research lab was
     supposed to be the safest place, but now... everything\u2019s out of control.
     The experiments failed, and... the virus has escaped. It\u2019s unbelievable\u2014not
     only is it spreading, but it\u2019s also turning dead bodies into... zombies.
     They\u2019re everywhere, taking down one person after another, and then... rising
     again as these soulless monsters. This place isn\u2019t a research lab anymore...
     it\u2019s become a living nightmare."
+  _disableWhenFinish: 1
 --- !u!1001 &1925858848
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28483,6 +28678,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000013978381734, guid: fe9a19d4f0d796c40bf4fc6b69dd7b81, type: 3}
   m_PrefabInstance: {fileID: 2031985985}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2049026962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2049026963}
+  m_Layer: 0
+  m_Name: Spawn Point (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2049026963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2049026962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.51, y: 0, z: 1.83}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1874306668}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2057076517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29338,30 +29564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a6e8a1b197a94dbf9d9c5c40d0a23ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rightActivate:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Activate
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: b7f81208-25fc-4b81-a289-17942b11754b
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
-  _rightSelect:
-    m_UseReference: 1
-    m_Action:
-      m_Name: Right Select
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: db050576-d44c-41fe-a91d-2f18bd891476
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 187161793506945269, guid: c348712bda248c246b8c49b3db54643f, type: 3}
 --- !u!4 &2111461413
 Transform:
   m_ObjectHideFlags: 0
@@ -29507,7 +29709,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97772dc4778a4417f8145e78fe260dbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _voiceText: Step 5... fisnish
+  _voiceText: Step 5... finish
+  _disableWhenFinish: 1
 --- !u!1001 &2134750052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29992,7 +30195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1611155561646778984, guid: c6c1472691454468791af67b23a88d7b, type: 3}
       propertyPath: m_Name
-      value: Warzombie F Pedroso
+      value: Warzombie F Pedroso (Instruction)
       objectReference: {fileID: 0}
     - target: {fileID: 1611155561646778984, guid: c6c1472691454468791af67b23a88d7b, type: 3}
       propertyPath: m_IsActive
@@ -30037,7 +30240,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1611155561646778984, guid: c6c1472691454468791af67b23a88d7b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 919132148556537604}
   m_SourcePrefab: {fileID: 100100000, guid: c6c1472691454468791af67b23a88d7b, type: 3}
 --- !u!4 &543450653098952120 stripped
 Transform:
@@ -30049,6 +30255,18 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1611155561646778984, guid: c6c1472691454468791af67b23a88d7b, type: 3}
   m_PrefabInstance: {fileID: 67186024543039973}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &919132148556537604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148556537602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06712848b52344f4abf8f3c6b151a802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2199881787064098878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30136,8 +30354,10 @@ SceneRoots:
   - {fileID: 1785492550}
   - {fileID: 644780532}
   - {fileID: 907154691}
+  - {fileID: 1874306668}
   - {fileID: 1867727223}
   - {fileID: 1422752842}
+  - {fileID: 822046099}
   - {fileID: 1110580856}
   - {fileID: 846862748}
   - {fileID: 1701492928}

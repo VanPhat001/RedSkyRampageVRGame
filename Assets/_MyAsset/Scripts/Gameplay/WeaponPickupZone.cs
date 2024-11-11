@@ -3,6 +3,7 @@ using UnityEngine;
 public class WeaponPickupZone : MonoBehaviour
 {
     [SerializeField] private LayerMask _detectLayer;
+    [SerializeField] private WeaponSO _weaponSO;
 
     void OnTriggerEnter(Collider other)
     {
@@ -11,7 +12,8 @@ public class WeaponPickupZone : MonoBehaviour
             return;
         }
 
-        PlayerManager.Singleton.PlayerWeapon.ActiveWeapon();
+        // PlayerManager.Singleton.PlayerWeapon.ActiveWeapon();
+        PlayerManager.Singleton.PlayerWeapon.PickWeapon(_weaponSO);
         this.gameObject.SetActive(false);
     }
 }
