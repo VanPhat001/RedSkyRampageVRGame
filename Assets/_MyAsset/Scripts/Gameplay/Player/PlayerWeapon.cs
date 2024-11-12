@@ -1,30 +1,31 @@
+using System;
 using UnityEngine;
 
 public class PlayerWeapon : MonoBehaviour
 {
-    // [SerializeField] private Transform _weaponPoint;
-    [SerializeField] private Transform _gunContainer;
-    [SerializeField] private BaseGun _gun;
-    public BaseGun Gun { get => _gun; private set => _gun = value; }
+    [SerializeField] private WeaponContainer _leftHandWeaponContainer;
+    [SerializeField] private WeaponContainer _rightHandWeaponContainer;
 
-    public bool HaveWeapon()
+    public BaseGun LeftGun => _leftHandWeaponContainer.Gun;
+    public BaseGun RightGun => _rightHandWeaponContainer.Gun;
+
+
+    public bool HaveWeapon(bool isRightHand)
     {
-        return Gun != null;
+        return (isRightHand ? RightGun : LeftGun) != null;
     }
 
-    public void ActiveWeapon()
+    public void PickWeapon(bool isRightHand, WeaponSO weaponSO)
     {
-        Gun.gameObject.SetActive(true);
-    }
+        var weaponContainer = isRightHand ? _rightHandWeaponContainer : _leftHandWeaponContainer;
 
-    public void PickWeapon(WeaponSO weaponSO)
-    {
-        ThrowWeapon();
+        ThrowWeapon(isRightHand);
 
         GameObject weaponPrefab;
         weaponPrefab = weaponSO.WeaponType switch
         {
-            EWeaponTypes.Gun => weaponSO.GunPrefab,
+            EWeaponTypes.Gun => weaponSO.Prefab,
+            EWeaponTypes.MissionItem => weaponSO.Prefab,
             _ => null
         };
 
@@ -34,32 +35,39 @@ public class PlayerWeapon : MonoBehaviour
         }
 
         var weapon = Instantiate(weaponPrefab);
-        weapon.transform.SetParent(_gunContainer);
+        weapon.transform.SetParent(weaponContainer.Container);
         weapon.transform.localPosition = Vector3.zero;
         weapon.transform.localRotation = Quaternion.identity;
 
-        Gun = weapon.GetComponent<BaseGun>();
+        weaponContainer.Gun = weapon.GetComponent<BaseGun>();
     }
 
-    public void ThrowWeapon()
+    public void ThrowWeapon(bool isRightHand)
     {
-        if (Gun == null)
+        var weaponContainer = isRightHand ? _rightHandWeaponContainer : _leftHandWeaponContainer;
+        ThrowWeapon(weaponContainer);
+    }
+
+    public void ThrowWeapon(WeaponContainer weaponContainer)
+    {
+        if (weaponContainer.Gun == null)
         {
             return;
         }
 
         // !!!TODO: change bellow code to throw weapon instead of destroy it =D
-        Gun = null;
-        foreach (Transform child in _gunContainer)
+        weaponContainer.Gun = null;
+        foreach (Transform child in weaponContainer.Container)
         {
             Destroy(child.gameObject);
         }
     }
+}
 
-    // public void PickGun(BaseGun gun)
-    // {
-    //     _gun = gun;
-    //     Gun.transform.position = _weaponPoint.position;
-    //     Gun.transform.rotation = _weaponPoint.rotation;
-    // }
+
+[Serializable]
+public class WeaponContainer
+{
+    public Transform Container;
+    [HideInInspector] public BaseGun Gun;
 }

@@ -15,7 +15,7 @@ public class WarningLayout : BaseLayout
     }
 
     [Obsolete("dont use this function", true)]
-    public override void OpenLayout()
+    public new void OpenLayout()
     {
         base.OpenLayout();
     }

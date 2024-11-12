@@ -79,7 +79,7 @@ namespace WarZombie
             HP = Mathf.Clamp(HP - damage, 0, 100);
             _healthBarSlider.SetValue(HP / 100f);
 
-            if (HP <= 0)
+            if (HP <= 0 && CurrentState != StateName.Death)
             {
                 ChangeState(StateName.Death);
             }

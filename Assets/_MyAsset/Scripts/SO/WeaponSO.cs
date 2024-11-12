@@ -6,8 +6,8 @@ public class WeaponSO : ScriptableObject
     [SerializeField] private EWeaponTypes _weaponType;
     public EWeaponTypes WeaponType => _weaponType;
 
-    [SerializeField] private GameObject _gunPrefab;
-    public GameObject GunPrefab => _gunPrefab;
+    [SerializeField] private GameObject _prefab;
+    public GameObject Prefab => _prefab;
 
     // [SerializeField] private GameObject _otherWeaponPrefab;
     // public GameObject OtherWeaponPrefab => _otherWeaponPrefab;
@@ -15,5 +15,6 @@ public class WeaponSO : ScriptableObject
 
 public enum EWeaponTypes
 {
-    Gun
+    Gun,
+    MissionItem
 }

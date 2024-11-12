@@ -6,6 +6,7 @@ public abstract class BaseFSMManager<EnumType> : MonoBehaviour where EnumType : 
 {
     private Dictionary<EnumType, BaseState> _stateDic = new();
     private EnumType _currentState;
+    public EnumType CurrentState => _currentState;
 
     protected void InitFSM(EnumType defaultState, params (EnumType, BaseState)[] states)
     {

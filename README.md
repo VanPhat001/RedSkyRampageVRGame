@@ -80,7 +80,7 @@ Bối cảnh:
   - [x] Hướng dẫn bóp cò
   - [x] Hướng dẫn nạp đạn
 - [ ] Mission 2
-  - [ ] Tiêu diệt 3 zombie -> Rớt thư
+  - [x] Tiêu diệt 3 zombie -> Rớt thư
 - [ ] Mission 3
   - [ ] Nhặt mission item (thư)
   - [ ] Đi đến vị trí chỉ định

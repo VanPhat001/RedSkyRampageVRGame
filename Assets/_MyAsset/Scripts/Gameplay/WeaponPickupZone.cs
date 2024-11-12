@@ -12,8 +12,16 @@ public class WeaponPickupZone : MonoBehaviour
             return;
         }
 
+        var leftHand = other.GetComponent<LeftHand>();
+        var rightHand = other.GetComponent<RightHand>();
+        if (leftHand == null && rightHand == null)
+        {
+            return;
+        }
+
         // PlayerManager.Singleton.PlayerWeapon.ActiveWeapon();
-        PlayerManager.Singleton.PlayerWeapon.PickWeapon(_weaponSO);
+        // Debug.Log("trigger " + other.name + " " + other.attachedRigidbody.name);
+        PlayerManager.Singleton.PlayerWeapon.PickWeapon(rightHand != null, _weaponSO);
         this.gameObject.SetActive(false);
     }
 }

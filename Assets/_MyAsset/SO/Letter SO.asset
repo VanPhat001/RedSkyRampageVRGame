@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 340ab4e0b12f142b49e3ec43ae428cac, type: 3}
-  m_Name: Build Option SO
+  m_Script: {fileID: 11500000, guid: a675b130a7cac40f5847fa69e40d6f5d, type: 3}
+  m_Name: Letter SO
   m_EditorClassIdentifier: 
-  _description: "Ch\u1EC9 build Client."
-  _option: 1
+  _weaponType: 1
+  _prefab: {fileID: 2691220954508303465, guid: b4fa74b456e2a41e6a98e5c9b7718c6e, type: 3}

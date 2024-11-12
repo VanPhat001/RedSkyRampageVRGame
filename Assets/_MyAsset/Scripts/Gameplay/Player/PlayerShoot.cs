@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerShoot : MonoBehaviour
 {
-    // [SerializeField] private InputActionProperty _rightActivate;
-    // [SerializeField] private InputActionProperty _rightSelect;
     private PlayerWeapon _playerWeapon;
 
     void Start()
@@ -15,32 +13,82 @@ public class PlayerShoot : MonoBehaviour
 
     void Update()
     {
-        // var isHoldRightTrigger = _rightActivate.action.ReadValue<float>() > 0;
-        // var isHoldRightSelect = _rightSelect.action.ReadValue<float>() > 0;
         var isRightHandTriggerHold = InputManager.Singleton.IsRightHand_TriggerHold;
         var isRightHandGripHold = InputManager.Singleton.IsRightHand_GripHold;
+        var isLeftHandTriggerHold = InputManager.Singleton.IsLeftHand_TriggerHold;
+        var isLeftHandGripHold = InputManager.Singleton.IsLeftHand_GripHold;
 
         if (isRightHandTriggerHold)
         {
-            Fire();
+            RightFire();
         }
         if (isRightHandGripHold)
         {
-            Reload();
+            RightReload();
+        }
+        if (isLeftHandTriggerHold)
+        {
+            LeftFire();
+        }
+        if (isLeftHandGripHold)
+        {
+            LeftReload();
         }
     }
 
-    public void Fire()
+    public void RightFire()
     {
-        if (_playerWeapon.HaveWeapon() && _playerWeapon.Gun.Fire())
+        try
         {
+            if (_playerWeapon.HaveWeapon(true) && _playerWeapon.RightGun.Fire())
+            {
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("[DEV, ERROR] " + e);
         }
     }
 
-    public void Reload()
+    public void RightReload()
     {
-        if (_playerWeapon.HaveWeapon() && _playerWeapon.Gun.Reload())
+        try
         {
+            if (_playerWeapon.HaveWeapon(true) && _playerWeapon.RightGun.Reload())
+            {
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("[DEV, ERROR] " + e);
+        }
+    }
+
+    public void LeftFire()
+    {
+        try
+        {
+            if (_playerWeapon.HaveWeapon(false) && _playerWeapon.LeftGun.Fire())
+            {
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("[DEV, ERROR] " + e);
+        }
+    }
+
+    public void LeftReload()
+    {
+        try
+        {
+            if (_playerWeapon.HaveWeapon(false) && _playerWeapon.LeftGun.Reload())
+            {
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log("[DEV, ERROR] " + e);
         }
     }
 }

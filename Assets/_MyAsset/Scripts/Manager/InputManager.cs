@@ -18,7 +18,7 @@ public class InputManager : MonoBehaviour
 
 
     public bool IsLeftHand_TriggerHold { get; private set; } = false;
-    public bool IsLeftGripHold { get; private set; } = false;
+    public bool IsLeftHand_GripHold { get; private set; } = false;
 
     public bool IsRightHand_TriggerHold { get; private set; } = false;
     public bool IsRightHand_GripHold { get; private set; } = false;
@@ -47,7 +47,7 @@ public class InputManager : MonoBehaviour
     void Update()
     {
         IsLeftHand_TriggerHold = _leftHandActivate.action.ReadValue<float>() >= HOLD_THRESHOLD;
-        IsLeftGripHold = _leftHandSelect.action.ReadValue<float>() >= HOLD_THRESHOLD;
+        IsLeftHand_GripHold = _leftHandSelect.action.ReadValue<float>() >= HOLD_THRESHOLD;
 
         IsRightHand_TriggerHold = _rightHandActivate.action.ReadValue<float>() >= HOLD_THRESHOLD;
         IsRightHand_GripHold = _rightHandSelect.action.ReadValue<float>() >= HOLD_THRESHOLD;
